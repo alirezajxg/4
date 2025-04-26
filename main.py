@@ -1,5 +1,15 @@
-x = int(input("Enter a number: "))
-for i in range(1,x+1):
-    for j in range(1,i+1):
-        print(j)
-print("end")
+import random
+secret = random.randint(1, 100)
+tries = 0
+
+while True:
+    guess = int(input("حدس بزن (1-100): "))
+    tries += 1
+
+    if guess < secret:
+        print("برو بالاتر")
+    elif guess > secret:
+        print("بیا پایینتر")
+    else:
+        print(f"آفرین! در {tries} تلاش درست حدس زدی")
+        break
